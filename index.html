@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raspberry Pi LED Control</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        h1 { color: #333; }
+        .led-control { margin: 20px; }
+        button { padding: 10px 20px; margin: 5px; font-size: 16px; border-radius: 8px; cursor: pointer; }
+        .on { background-color: green; color: white; }
+        .off { background-color: red; color: white; }
+        .blink { background-color: orange; color: white; }
+    </style>
+</head>
+<body>
+    <h1>LED Control Panel</h1>
+
+    <div class="led-control">
+        <h2>LED 1 ({{ 'ON' if led1 else 'OFF' }})</h2>
+        <a href="/led1/on"><button class="on">ON</button></a>
+        <a href="/led1/off"><button class="off">OFF</button></a>
+        <a href="/led1/blink"><button class="blink">BLINK</button></a>
+    </div>
+
+    <div class="led-control">
+        <h2>LED 2 ({{ 'ON' if led2 else 'OFF' }})</h2>
+        <a href="/led2/on"><button class="on">ON</button></a>
+        <a href="/led2/off"><button class="off">OFF</button></a>
+        <a href="/led2/blink"><button class="blink">BLINK</button></a>
+    </div>
+
+    <div class="led-control">
+        <h2>Both LEDs</h2>
+        <a href="/both/on"><button class="on">ON</button></a>
+        <a href="/both/off"><button class="off">OFF</button></a>
+        <a href="/both/blink"><button class="blink">BLINK</button></a>
+    </div>
+</body>
+</html>
