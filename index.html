@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Raspberry Pi LED Control</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; margin-top: 50px; }
+        button { padding: 10px 20px; margin: 10px; font-size: 16px; border-radius: 8px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Raspberry Pi LED Control</h1>
+    <p>
+        <a href="{{ url_for('led_on') }}"><button>Turn ON</button></a>
+        <a href="{{ url_for('led_off') }}"><button>Turn OFF</button></a>
+        <a href="{{ url_for('start_blink') }}"><button>Blink</button></a>
+        <a href="{{ url_for('stop_blink') }}"><button>Stop Blink</button></a>
+    </p>
+</body>
+</html>
